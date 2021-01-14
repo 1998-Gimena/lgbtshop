@@ -1,0 +1,180 @@
+/* GLOBALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.titulo {
+    font-family: 'Audiowide', cursive;
+    font-size: 3em;
+}
+
+.sub-titulo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em;
+    margin: auto;
+}
+
+h3 {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* SECTION */
+
+.centrado {
+    margin: 30px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+/* HEADER */
+
+header {
+    height: 55px;
+    background-color: rgb(212, 136, 136);
+    display: flex;
+    align-items: center;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu ul {
+    background-color: rgb(212, 136, 136);
+    display: flex;
+}
+
+.menu ul ul {
+    display: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+}
+
+.menu a:hover {
+    color: #ffff22;
+}
+
+.menu a span {
+    margin-left: 10px;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: 2s;
+    }
+    .menu ul {
+        display: block;
+    }
+    .menu ul li:hover ul {
+        display: none;
+    }
+    .menu a span {
+        position: absolute;
+        right: 15px;
+    }
+    #btn-menu:checked~.menu {
+        transform: translateX(0%);
+    }
+    span {
+        display: none;
+    }
+    .producto-invisible {
+        display: none;
+    }
+}
+
+
+/* MAIN RECOMENDACIONES */
+
+main {
+    margin: auto;
+}
+
+main h1 {
+    margin: 10px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    margin: auto;
+}
+
+.boton {
+    color: #000000;
+    background-color: #ffff22;
+    margin: 20px;
+    padding: 5px;
+    display: flex-end;
+}
+
+.boton:hover {
+    padding: 10px;
+}
+
+
+/* ARTICULOS */
+
+.blog {
+    display: flex;
+}
+
+.articulo {
+    width: 10em;
+    height: 1em;
+    margin: auto;
+    border: #000000 1px;
+    display: block;
+    text-align: center;
+}
+
+.boton-articulo {
+    margin-top: 500px;
+    display: inline-block;
+}
+
+footer {
+    background-color: rgb(212, 136, 136);
+    color: #000000;
+}
+
+footer p {
+    margin-left: 15px;
+    font-size: 1.2em;
+}
